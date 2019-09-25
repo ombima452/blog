@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Blog</title>
+    <!-- <link href="{{url_for('static',filename='bootstrap.css')}}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css”>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div >
+
+            <nav class="navbar navbar-inverse">
+                <div class="">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="{{ url_for('index')}}">My Blog</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a class="nav-link" style="font-family:'Roboto Condensed', sans-serif;"
+                                href="{{ url_for('index')}}">Home</a></li>
+                        <li class="active"> <a class="nav-link" style="font-family: 'Roboto Condensed', sans-serif;"
+                                href="{{ url_for('about')}}">About</a></li>
+                       
+                    </ul>
+                   
+                </div>
+            </nav>
+        </div>
+        <div>
+               
+                <h3 style="text-align: center;margin-top: 6%;">Add a blog</h3> <br>
+                <form class="form-horizontal" style="width:60%;margin-left: 15%;" name="addForm" id="addForm" method="POST"
+                    action="{{url_for('addpost')}}">
+                    <div class="form-group">
+                        <label for="title" class="col-sm-2 control-label">Title</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="title" name="title">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="subtitle" class="col-sm-2 control-label">Subtitle</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="subtitle" name="subtitle">
+                        </div>
+                    </div>
+            
+                    <br>
+                    <div class="form-group">
+                        <label for="author" class="col-sm-2 control-label">Author</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="author" name="author">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="content" class="col-sm-2 control-label">Blog Content</label>
+                        <div class="col-sm-10">
+                            <textarea rows="5" class="form-control" id="content" name="content"></textarea>
+                        </div>
+                    </div>
+                    <br>
+                    <button style="margin-left: 50%"><a href="{{url_for('index')}}" class="btn btn-primary">POST</a></button>
+                </form>
+        </div>
+    </div>
+</body>
+
+</html>
