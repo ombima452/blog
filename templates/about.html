@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Blog</title>
+    <!-- <link href="{{url_for('static',filename='bootstrap.css')}}" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div
+            style="background-image: url('{{url_for('static',filename='wallpe.jpg')}}'); background-repeat:no-repeat; background-size:cover; height:400px">
+            <div >
+
+                <nav class="navbar navbar-inverse">
+                    <div class="">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="{{ url_for('index')}}">My Blog</a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a class="nav-link" style="font-family:'Roboto Condensed', sans-serif;"
+                                    href="{{ url_for('index')}}">Home</a></li>
+                            <li class="active"> <a class="nav-link" style="font-family: 'Roboto Condensed', sans-serif;"
+                                    href="{{ url_for('about')}}">About</a></li>
+                            <li class="active"> <a class="nav-link" style="font-family: 'Roboto Condensed', sans-serif;"
+                                    href="{{ url_for('post')}}">Post a Blog</a></li> 
+                          
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{ url_for('signup')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="{{url_for('login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div>
+
+            </div>
+            <h1 style="font-size: 80px; text-align: center; margin-top: 6%"> What we do </h1> <br> <br>
+        </div>
+        <br> <br><br>
+        <p style="text-align: center">ert5drtyhbnm asdfghjk,mnbvcsertyhjmnbvc asertyui.,mnbdfghj rtuiolhgfdsaqw45yuj
+            weryuilhgfdsawertyuiolh wertyjdsertyujn srthbvcdfghjkm</p>
+    </div>
+</body>
+
+</html>
