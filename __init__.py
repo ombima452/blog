@@ -40,10 +40,10 @@ def post():
 def contact():
     return render_template('contact.html')
 
-# @app.route('/login')
-# def login():
+@app.route('/login')
+def login():
    
-#     return render_template('login.html')
+    return render_template('login.html')
 
 
 
