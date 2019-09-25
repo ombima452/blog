@@ -19,9 +19,9 @@ class Blogpost(db.Model):
     content = db.Column(db.Text)
 
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 # @app.route('/signup')
 # def signup():
