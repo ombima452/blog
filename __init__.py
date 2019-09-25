@@ -31,10 +31,10 @@ def signup():
 def about():
     return render_template('about.html')
 
-# @app.route('/post')
+@app.route('/post')
 
-# def post():
-#     return render_template('post.html') 
+def post():
+    return render_template('post.html') 
 
 # @app.route('/contact')
 # def contact():
